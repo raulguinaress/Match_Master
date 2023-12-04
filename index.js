@@ -18,7 +18,7 @@ const gridContainer = document.querySelector(".field");
     { "name": "Dog", "image": "Dog.png" },
     { "name": "Cat", "image": "Cat.png" },
     { "name": "Capy", "image": "Capy.png" },
-       // Add more card objects as needed
+   
     
   ];
   let firstCard = null;
@@ -85,14 +85,13 @@ const gridContainer = document.querySelector(".field");
     score++;
     document.querySelector(".score").textContent = score;
 
-    // Check if the game is won
+  
     if (score === cards.length / 2) {
       playVictorySound();
       alert("Congratulations! You've completed Match Masters!");
-            // You can perform any actions you want after winning the game here
-      
+
     } else {
-      playSameCardMusic(); // Play "yeah" sound when a match is found
+      playSameCardMusic(); 
     }
   } else {
     unflipCards();
@@ -111,7 +110,7 @@ const gridContainer = document.querySelector(".field");
     firstCard.classList.remove("flipped");
     secondCard.classList.remove("flipped");
 
-        // Change card images after flipping
+     
     const firstImage = firstCard.querySelector('.front-image');
     const secondImage = secondCard.querySelector('.front-image');
 
@@ -139,7 +138,7 @@ const gridContainer = document.querySelector(".field");
     document.querySelector(".score").textContent = score;
 
     
-    // Clear existing cards from the grid
+
     gridContainer.innerHTML = "";
     shuffleCards();
     generateCards();
